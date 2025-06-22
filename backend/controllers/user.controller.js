@@ -52,7 +52,6 @@ const getUsers = async (req, res) => {
   }
 };
 
-
 const deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -81,8 +80,7 @@ const deleteUser = async (req, res) => {
   }
 };
 
-
 module.exports = {
   getUsers,
-  deleteUser
+  deleteUser,
 };

@@ -33,7 +33,7 @@ const User = sequelize.define(
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false, 
+      allowNull: false,
     },
     profileImage: {
       type: DataTypes.STRING,
@@ -42,7 +42,7 @@ const User = sequelize.define(
     role: {
       type: DataTypes.ENUM("user", "admin"),
       defaultValue: "user",
-    }, 
+    },
     passwordResetToken: {
       type: DataTypes.STRING,
       allowNull: true,

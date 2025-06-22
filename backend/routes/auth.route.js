@@ -1,5 +1,4 @@
-
-const express =require("express");
+const express = require("express");
 const { body } = require("express-validator");
 const {
   login,
@@ -32,8 +31,9 @@ router.post(
       .withMessage("Password must be at least 5 characters"),
   ],
   signup
-); 
-router.post("/login",
+);
+router.post(
+  "/login",
   [
     body("email")
       .isEmail()
@@ -41,14 +41,14 @@ router.post("/login",
       .withMessage("Please provide a valid email"),
     body("password").notEmpty().withMessage("Password is required"),
   ],
-  
-  login);
+
+  login
+);
 router.post("/logout", logout);
 router.post("/refresh-token", refreshToken);
 router.get("/profile", protectRoute, getProfile);
 
-
-router.post("/forgot-password", forgotPassword); 
-router.post("/reset-password/:token", resetPassword); 
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password/:token", resetPassword);
 
 module.exports = router;

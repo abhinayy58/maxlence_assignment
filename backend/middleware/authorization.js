@@ -14,11 +14,10 @@ const protectRoute = async (req, res, next) => {
     try {
       const decoded = jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
 
-      // Sequelize equivalent of `findById().select('-password')`
       const user = await User.findByPk(decoded.userId, {
         attributes: { exclude: ["password"] },
       });
-      console.log(user)
+      console.log(user);
 
       if (!user) {
         return res.status(401).json({ message: "User not found" });

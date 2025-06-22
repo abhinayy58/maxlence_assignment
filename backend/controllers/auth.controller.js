@@ -119,10 +119,9 @@ const refreshToken = async (req, res) => {
     const storedToken = await redis.get(`refresh_token:${decoded.userId}`);
 
     if (storedToken !== refreshToken) {
-      await revokeRefreshToken(token); 
+      await revokeRefreshToken(token);
       return res.status(401).json({ message: "Invalid refresh token" });
     }
-    
 
     const accessToken = jwt.sign(
       { userId: decoded.userId },

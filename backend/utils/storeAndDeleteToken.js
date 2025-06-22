@@ -6,7 +6,7 @@ const storeRefreshToken = async (userId, refreshToken) => {
     refreshToken,
     "EX",
     7 * 24 * 60 * 60
-  ); 
+  );
 };
 const revokeRefreshToken = async (refreshToken) => {
   try {
