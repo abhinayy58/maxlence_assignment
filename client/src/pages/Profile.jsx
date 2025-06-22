@@ -3,7 +3,7 @@ import axios from "../utils/api";
 import { useNavigate } from "react-router-dom";
 import ImageModal from "../components/ImageModel";
 
-export default function Profile() {
+function Profile() {
   const [user, setUser] = useState(null);
   const [previewOpen, setPreviewOpen] = useState(false);
   const navigate = useNavigate();
@@ -69,3 +69,5 @@ export default function Profile() {
     </div>
   );
 }
+
+export default Profile;

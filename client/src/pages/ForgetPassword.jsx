@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "../utils/api";
 import { useState } from "react";
 
-export default function ForgotPassword() {
+function ForgotPassword() {
   const {
     register,
     handleSubmit,
@@ -48,3 +48,5 @@ export default function ForgotPassword() {
     </div>
   );
 }
+
+export default ForgotPassword;

@@ -3,7 +3,7 @@ import axios from "../utils/api";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function SignIn() {
+function SignIn() {
   const {
     register,
     handleSubmit,
@@ -15,7 +15,7 @@ export default function SignIn() {
   const onSubmit = async (data) => {
     try {
       const res = await axios.post("/auth/login", data);
-      console.log(res)
+      console.log(res);
       const userRole = res.data.role;
       navigate(userRole === "admin" ? "/admin" : "/profile");
     } catch (err) {
@@ -96,3 +96,5 @@ export default function SignIn() {
     </div>
   );
 }
+
+export default SignIn;

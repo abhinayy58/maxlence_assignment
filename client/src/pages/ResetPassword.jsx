@@ -3,7 +3,7 @@ import axios from "../utils/api";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function ResetPassword() {
+function ResetPassword() {
   const { token } = useParams();
   const navigate = useNavigate();
   const {
@@ -52,3 +52,6 @@ export default function ResetPassword() {
     </div>
   );
 }
+
+
+export default  ResetPassword

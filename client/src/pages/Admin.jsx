@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "../utils/api";
 import { useNavigate } from "react-router-dom";
 
-export default function Admin() {
+function Admin() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [pagination, setPagination] = useState({
@@ -136,3 +136,5 @@ export default function Admin() {
     </div>
   );
 }
+
+export default Admin

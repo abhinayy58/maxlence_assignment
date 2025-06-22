@@ -9,7 +9,7 @@ import ProtectedRoute from "./utils/ProtectedRoutes";
 import ForgotPassword from "./pages/ForgetPassword";
 import ResetPassword from "./pages/ResetPassword";
 
-export default function App() {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
@@ -40,3 +40,5 @@ export default function App() {
     </Routes>
   );
 }
+
+export default App;

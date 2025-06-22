@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "../utils/api"; // your axios instance with withCredentials: true
 
-export default function ProtectedRoute({ children, requiredRole }) {
+function ProtectedRoute({ children, requiredRole }) {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userRole, setUserRole] = useState(null);
@@ -11,7 +11,7 @@ export default function ProtectedRoute({ children, requiredRole }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("/auth/profile"); 
+        const res = await axios.get("/auth/profile");
         setIsAuthenticated(true);
         setUserRole(res.data.role);
         if (res) {
@@ -46,3 +46,5 @@ export default function ProtectedRoute({ children, requiredRole }) {
 
   return children;
 }
+
+export default ProtectedRoute;

@@ -57,7 +57,6 @@ function SignUp() {
       setError("Registration failed. Try again.");
     }
   };
-  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
@@ -146,7 +145,7 @@ function SignUp() {
                 required: "Profile picture is required",
               })}
               type="file"
-              name="profilePic" 
+              name="profilePic"
               accept="image/*"
               onChange={handleImageChange}
               className="w-full border rounded-lg p-2 file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700"

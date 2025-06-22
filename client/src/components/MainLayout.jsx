@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-export default function MainLayout() {
+function MainLayout() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState("");
   const location = useLocation();
@@ -39,3 +39,5 @@ export default function MainLayout() {
     </div>
   );
 }
+
+export default MainLayout

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-
-export default function Home() {
+function Home() {
   return (
     <div className="text-center mt-10 space-y-6">
       <h1 className="text-4xl font-bold">Welcome to the React Auth App</h1>
@@ -24,3 +23,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
